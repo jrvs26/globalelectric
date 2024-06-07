@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/globalelectric/static/css/main.7e15c343.css",
+    "main.js": "/globalelectric/static/js/main.765437cd.js",
+    "static/js/453.8ab44547.chunk.js": "/globalelectric/static/js/453.8ab44547.chunk.js",
+    "static/media/globaltranslogo.png": "/globalelectric/static/media/globaltranslogo.97cf2d575b5d5239d64a.png",
+    "static/media/carousel.jpg": "/globalelectric/static/media/carousel.3cb4526df93f66a7655e.jpg",
+    "static/media/company_service.jpg": "/globalelectric/static/media/company_service.b2a92aa3078fd4f1ad23.jpg",
+    "static/media/hazard.jpg": "/globalelectric/static/media/hazard.d6f3ade624995ddbe686.jpg",
+    "static/media/mission.jpg": "/globalelectric/static/media/mission.738f5221afd6fd43753b.jpg",
+    "static/media/vision.jpg": "/globalelectric/static/media/vision.f8a9c0a2f46f026c37af.jpg",
+    "index.html": "/globalelectric/index.html",
+    "main.7e15c343.css.map": "/globalelectric/static/css/main.7e15c343.css.map",
+    "main.765437cd.js.map": "/globalelectric/static/js/main.765437cd.js.map",
+    "453.8ab44547.chunk.js.map": "/globalelectric/static/js/453.8ab44547.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7e15c343.css",
+    "static/js/main.765437cd.js"
+  ]
+}
