@@ -169,7 +169,7 @@ function About({ id }) {
                   <a href="/">Engr. Jojo Tobias</a>
                 </cite>
                 <cite className="ps-3 text-sm text-gray-500">
-                  CEO and President of Global ELectric Power Development
+                  CEO and President of Global Electric Power Development
                   Corporation.
                 </cite>
               </div>
@@ -181,7 +181,7 @@ function About({ id }) {
                   <a href="/">Engr. Edgardo Garcia</a>
                 </cite>
                 <cite className="ps-3 text-sm text-gray-500">
-                  VIce President and COO Of Global ELectric Power Development
+                  COO and Vice President Of Global Electric Power Development
                   Corporation.
                 </cite>
               </div>
