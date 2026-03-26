@@ -17,29 +17,23 @@ function ContactHero() {
       .send(
         "service_766kcyb",
         "template_eebmeon",
-        {
-          user_name: name,
-          user_email: email,
-          message: message,
-        },
-        "e_5XlqBed6SydF93e"
+        { user_name: name, user_email: email, message },
+        "GMOoI1-MjyxowK7y9",
       )
       .then(
-        (result) => {
+        () => {
           Swal.fire({
-            toast: true,                  // makes it a small popup like notification
-            position: 'top-end',           // top-right corner
-            icon: 'success',               // success, error, info, etc.
-            title: 'Message Sent!',
-            text: 'Your message has been sent successfully.',
-            showConfirmButton: false,      // removes the OK button
-            timer: 5000,                   // auto-close after 3 seconds
-            timerProgressBar: true,        // shows progress bar countdown
-            background: '#fff',            // optional styling
-            iconColor: '#FBBF24',          // matches your Tailwind yellow
-            customClass: {
-              popup: 'shadow-lg rounded-lg' // optional custom styling
-            }
+            toast: true,
+            position: "top-end",
+            icon: "success",
+            title: "Message Sent!",
+            text: "Your message has been sent successfully.",
+            showConfirmButton: false,
+            timer: 5000,
+            timerProgressBar: true,
+            background: "#fff",
+            iconColor: "#FBBF24",
+            customClass: { popup: "shadow-lg rounded-lg" },
           });
           setName("");
           setEmail("");
@@ -47,43 +41,89 @@ function ContactHero() {
           setLoading(false);
         },
         (error) => {
-          console.error(error.text);
+          console.error(error);
           Swal.fire({
+            toast: true,
+            position: "top-end",
             icon: "error",
-            title: "Oops...",
-            text: "Failed to send message. Please try again.",
-            confirmButtonColor: "#FBBF24",
+            title: "Message Failed!",
+            text: "Your message could not be sent. Please try again.",
+            showConfirmButton: false,
+            timer: 5000,
+            timerProgressBar: true,
+            background: "#fff",
+            iconColor: "#EF4444", // red for error
+            customClass: { popup: "shadow-lg rounded-lg" },
           });
           setLoading(false);
-        }
+        },
       );
   };
 
   return (
     <section className="bg-gray-50 py-40 px-6 md:px-20">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
-        {/* Text Section */}
-        <div>
-          <h1 className="text-4xl md:text-5xl font-medium mb-6 text-gray-900 text-center">
-            Contact Our <span className="text-yellow-500 font-bold">Team</span>
-          </h1>
-          <p className="text-lg md:text-xl mb-6 text-gray-700 text-center">
-            Have questions, project ideas, or inquiries? Our team is here to
-            help. Fill out the form and we’ll get back to you as soon as possible.
-          </p>
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+        {/* Left Column: Company Info + Image */}
+        <div className="space-y-6">
+          {/* Company Info on Top */}
+          <h2 className="text-3xl font-bold text-gray-900">
+            Global Electric Power Development Corporation
+          </h2>
 
-          <img
-            src={globalLogo}
-            alt="Team Illustration"
-            className="rounded-xl w-full object-cover transform hover:scale-105 transition duration-300"
-          />
+          <div className="text-gray-700 space-y-2 mt-4">
+            <p>
+              <strong>Location:</strong> 243 Germar St. Magasawang Sapa, Santa
+              Maria Bulacan 3022, Philippines
+            </p>
+            <p>
+              <strong>Email:</strong> jojotobias@globalelectricpdc.com
+            </p>
+          </div>
+
+          <div className="mt-4">
+            <h3 className="text-xl font-semibold text-gray-900">
+              Partners & Investors
+            </h3>
+            <p className="text-gray-700 mt-2">
+              We welcome partnerships with renewable energy developers, project
+              investors, engineering consultants, equipment suppliers, and
+              construction partners.
+            </p>
+          </div>
+
+          <div className="mt-4">
+            <h3 className="text-xl font-semibold text-gray-900">
+              Licenses & Certifications
+            </h3>
+            <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
+              <li>PCAB Licensed Contractor</li>
+              <li>PhilGEPS Registered Supplier</li>
+              <li>
+                Compliance with national engineering standards and
+                safety/environmental regulations
+              </li>
+            </ul>
+          </div>
+
+          {/* Image below info */}
+          <div className="rounded-xl w-[500px] h-[250px] overflow-hidden mt-4">
+            <img
+              src={globalLogo}
+              alt="Illustration of our team collaborating"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
 
-        {/* Contact Form */}
+        {/* Right Column: Contact Form */}
         <form
-          className="bg-white p-8 rounded-xl shadow-md space-y-6 mt-6 md:mt-0"
+          className="bg-white p-12 rounded-xl shadow-md space-y-8"
           onSubmit={handleSubmit}
         >
+          <h3 className="text-2xl font-bold text-gray-900 text-center mb-4">
+            Send Us a Message
+          </h3>
+
           <div>
             <label className="block text-gray-700 font-semibold mb-2">
               Full Name
@@ -94,11 +134,12 @@ function ContactHero() {
               placeholder="Your Name"
               value={name}
               onChange={(e) => {
-                const regex = /^[A-Za-z\s]*$/;
+                const regex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]*$/;
                 if (regex.test(e.target.value)) setName(e.target.value);
               }}
               className="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-yellow-500"
               required
+              disabled={loading}
             />
           </div>
 
@@ -114,6 +155,7 @@ function ContactHero() {
               onChange={(e) => setEmail(e.target.value)}
               className="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-yellow-500"
               required
+              disabled={loading}
             />
           </div>
 
@@ -129,6 +171,7 @@ function ContactHero() {
               onChange={(e) => setMessage(e.target.value)}
               className="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-yellow-500"
               required
+              disabled={loading}
             ></textarea>
           </div>
 

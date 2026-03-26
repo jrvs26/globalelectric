@@ -1,112 +1,112 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaBolt, FaSolarPanel, FaShieldAlt } from "react-icons/fa";
+import { FaGlobe, FaBolt, FaSolarPanel, FaShieldAlt, FaUsers, FaQuoteLeft  } from "react-icons/fa";
 
-const features = [
-  {
-    icon: <FaSolarPanel className="text-4xl text-yellow-500 drop-shadow-md" />,
-    title: "Solar Farm Experts",
-    desc: "Leading provider of large-scale solar energy solutions with maximum efficiency.",
-  },
-  {
-    icon: <FaBolt className="text-4xl text-indigo-500 drop-shadow-md" />,
-    title: "Powerful Electrical Services",
-    desc: "Certified electricians delivering reliable installations for homes, businesses, and solar farms.",
-  },
-  {
-    icon: <FaShieldAlt className="text-4xl text-red-500 drop-shadow-md" />,
-    title: "Safe & Compliant",
-    desc: "We follow strict safety protocols and electrical codes on every project, including solar farms.",
-  },
+const coreValues = [
+  { title: "Integrity", desc: "Honesty, transparency, and ethical responsibility.", icon: <FaShieldAlt className="text-3xl text-red-500" /> },
+  { title: "Excellence", desc: "Deliver superior quality in engineering and project execution.", icon: <FaBolt className="text-3xl text-yellow-500" /> },
+  { title: "Innovation", desc: "Embrace modern technologies and forward-thinking solutions.", icon: <FaSolarPanel className="text-3xl text-green-500" /> },
+  { title: "Safety", desc: "Prioritize health and safety of employees and communities.", icon: <FaUsers className="text-3xl text-indigo-500" /> },
+  { title: "Commitment", desc: "Deliver projects on time, within budget, beyond expectations.", icon: <FaGlobe className="text-3xl text-blue-500" /> },
 ];
 
-function RightSideLightning() {
-  return (
-    <svg
-      className="absolute top-0 right-0 w-12 h-full pointer-events-none z-0"
-      viewBox="0 0 50 200"
-      preserveAspectRatio="none"
-    >
-      {/* Main jagged lightning */}
-      <motion.path
-        d="M25 0 L20 40 L35 70 L20 120 L30 160 L25 200"
-        stroke="#FACC15"
-        strokeWidth="2"
-        fill="transparent"
-        strokeLinecap="round"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: [0, 1, 0] }}
-        transition={{ repeat: Infinity, duration: 1.2, ease: "easeInOut" }}
-      />
-      {/* Secondary lightning branch */}
-      <motion.path
-        d="M30 0 L25 50 L40 80 L25 130 L35 180 L30 200"
-        stroke="#FBBF24"
-        strokeWidth="1.5"
-        fill="transparent"
-        strokeLinecap="round"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: [0, 1, 0] }}
-        transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut", delay: 0.4 }}
-      />
-    </svg>
-  );
-}
+const epcHighlights = [
+  { title: "Engineering Experience", desc: "29+ Years of engineering expertise.", icon: <FaBolt className="text-3xl text-yellow-500" /> },
+  { title: "Solar EPC Participation", desc: "100+ MW utility-scale solar projects.", icon: <FaSolarPanel className="text-3xl text-green-500" /> },
+  { title: "Full EPC Capability", desc: "From design, procurement, construction to commissioning.", icon: <FaShieldAlt className="text-3xl text-red-500" /> },
+];
 
-function AboutHero() {
+function AboutUs() {
   return (
-    <section className="pt-20 relative min-h-[80vh] bg-gray-50 pb-2">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section className="bg-gray-50 relative py-20 px-6 lg:px-16">
+      {/* Hero Intro */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="max-w-4xl mx-auto text-center mb-16"
+      >
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          About Global Electric Power Development Corporation
+        </h1>
+        <p className="text-gray-700 text-lg md:text-xl">
+          GEPDC is a Philippine-based Engineering, Procurement, and Construction (EPC) company specializing in renewable energy infrastructure and electrical power systems. We deliver safe, reliable, and innovative solutions for utility-scale solar farms and electrical projects nationwide.
+        </p>
+      </motion.div>
 
-        {/* Hero Header */}
+      {/* Vision & Mission Cards */}
+      <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto"
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="bg-white p-8 rounded-3xl shadow-lg border-l-4 border-blue-500"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
-            Dominating Solar Energy & Electrical Solutions
-          </h1>
-
-          <p className="mt-6 text-lg text-gray-700">
-            From residential wiring to large-scale solar farms, our team delivers safe, efficient, and sustainable electrical solutions.
-            We’re leading the charge in renewable energy installations.
-          </p>
+          <h2 className="text-2xl font-bold mb-4">Our Vision</h2>
+          <p className="text-gray-600">To become one of the leading EPC companies in the Philippines, recognized for excellence in renewable energy and sustainable power development.</p>
         </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="bg-white p-8 rounded-3xl shadow-lg border-l-4 border-yellow-500"
+        >
+          <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
+          <p className="text-gray-600">Deliver high-quality, reliable, and innovative EPC solutions supporting renewable energy and infrastructure development in the Philippines.</p>
+        </motion.div>
+      </div>
 
-        {/* Features */}
-        <div className="grid md:grid-cols-3 gap-10 mt-16 md:mb-2">
-          {features.map((feature, index) => (
+      {/* Core Values */}
+      <div className="max-w-6xl mx-auto mb-16">
+        <h2 className="text-3xl font-bold text-center mb-12">Our Core Values</h2>
+        <div className="grid md:grid-cols-5 gap-8">
+          {coreValues.map((value, i) => (
             <motion.div
-              key={index}
-              whileHover={{ y: -8, scale: 1.05 }}
-              className="relative bg-white rounded-3xl p-8 text-center border-l-4 border-yellow-500 shadow-lg hover:shadow-yellow-300/40 transition-all duration-500 overflow-hidden"
+              key={i}
+              whileHover={{ y: -6, scale: 1.03 }}
+              className="bg-white rounded-3xl p-6 text-center shadow-md hover:shadow-yellow-300/30 transition-all"
             >
-              {/* Right-side Lightning */}
-              <RightSideLightning />
-
-              {/* Icon with subtle glow */}
-              <div className="flex justify-center mb-5 relative z-10">
-                <div className="p-4 rounded-full bg-gray-100 border border-yellow-500 shadow-md animate-pulse">
-                  {feature.icon}
-                </div>
-              </div>
-
-              <h3 className="text-2xl font-bold text-gray-900 mb-3 relative z-10">
-                {feature.title}
-              </h3>
-
-              <p className="text-gray-600 relative z-10">
-                {feature.desc}
-              </p>
+              <div className="flex justify-center mb-4">{value.icon}</div>
+              <h3 className="font-bold text-lg mb-2">{value.title}</h3>
+              <p className="text-gray-600 text-sm">{value.desc}</p>
             </motion.div>
           ))}
         </div>
-
       </div>
+
+      {/* EPC Expertise & Track Record */}
+      <div className="max-w-5xl mx-auto mb-16">
+        <h2 className="text-3xl font-bold text-center mb-12">EPC Expertise & Track Record</h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          {epcHighlights.map((item, i) => (
+            <motion.div
+              key={i}
+              whileHover={{ y: -6, scale: 1.03 }}
+              className="bg-white p-8 rounded-3xl shadow-lg border-l-4 border-green-500 transition-all"
+            >
+              <div className="flex justify-center mb-4">{item.icon}</div>
+              <h3 className="font-bold text-xl mb-2">{item.title}</h3>
+              <p className="text-gray-600">{item.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* Founder Quote */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="max-w-4xl mx-auto text-center bg-white p-12 rounded-3xl shadow-lg border-l-4 border-indigo-500"
+      >
+        <FaQuoteLeft className="text-3xl text-indigo-500 mb-4 mx-auto" />
+        <p className="text-gray-700 italic mb-4">
+          "The development of renewable energy infrastructure is essential to securing the future of our country. Through engineering excellence and collaboration, we aim to contribute to building a sustainable energy landscape for generations to come."
+        </p>
+        <h3 className="text-lg font-bold text-gray-900">Engr. Jojo Tobias – Founder & CEO</h3>
+      </motion.div>
     </section>
   );
 }
 
-export default AboutHero;
+export default AboutUs;

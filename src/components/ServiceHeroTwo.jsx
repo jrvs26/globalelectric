@@ -8,20 +8,23 @@ import {
     BuildingOfficeIcon,
     ShieldCheckIcon,
     CpuChipIcon,
+    CheckCircleIcon,
+    DocumentCheckIcon,
+    ShieldExclamationIcon,
 } from "@heroicons/react/24/outline";
 
 function ServiceHeroTwo() {
 
     const technicalServices = [
-        "Terrain Modeling",
-        "PLS-Cadd Design (Transmission Line Design)",
         "Power System Analysis",
+        "Relay Protection & System Integration",
+        "Grounding & Lightning Protection",
         "Site Grading & Drainage Design",
-        "Foundation Design",
-        "Pull-out Testing",
+        "Road & Hydrological Design",
+        "Structural Foundations & Control Buildings",
+        "Soil Investigation & Pull-Out Testing",
         "PVsyst Study",
         "Lightning Risk Study",
-        "Soil Investigation Study",
     ];
 
     const maintenanceServices = [
@@ -31,8 +34,38 @@ function ServiceHeroTwo() {
         "Automatic & Manual Transfer Switch",
     ];
 
+    const projectMethodology = [
+        "Project Planning & Engineering",
+        "Procurement & Logistics",
+        "Construction & Installation",
+        "Testing & Commissioning",
+        "Project Turnover",
+    ];
+
+    const safetyCommitment = [
+        "Protect workforce and enforce safe work practices",
+        "Ensure environmental responsibility",
+        "Continuous safety improvement for accident-free projects",
+    ];
+
+    const qualityAssurance = [
+        "Engineering compliance verification",
+        "Material inspection and testing",
+        "Installation quality monitoring and documentation",
+    ];
+
+    const whyChooseUs = [
+        "Proven solar EPC experience",
+        "Experienced engineering leadership",
+        "Reliable project execution",
+        "Strong safety culture",
+        "Trusted renewable energy partner",
+    ];
+
     return (
         <div className="bg-gray-50 text-gray-800">
+
+            {/* ORIGINAL HERO SECTION */}
             <section className="bg-white border-b border-gray-200 py-6 mt-32">
                 <div className="container mx-auto px-6 text-center">
                     <p className="text-yellow-600 font-semibold tracking-widest uppercase text-5xl">
@@ -43,7 +76,7 @@ function ServiceHeroTwo() {
                     </h1>
                 </div>
             </section>
-            {/* HERO SECTION */}
+
             <section className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-24">
                 <div className="container mx-auto px-6 text-center">
                     <div className="flex justify-center mb-6">
@@ -60,7 +93,7 @@ function ServiceHeroTwo() {
 
                     <div className="mt-10 flex flex-wrap justify-center gap-8 text-center">
                         <div>
-                            <h3 className="text-3xl font-bold text-yellow-400">100MW+</h3>
+                            <h3 className="text-3xl font-bold text-yellow-400">620MW+</h3>
                             <p className="text-gray-400">Utility Projects</p>
                         </div>
                         <div>
@@ -75,7 +108,7 @@ function ServiceHeroTwo() {
                 </div>
             </section>
 
-            {/* EPC OVERVIEW */}
+            {/* ORIGINAL EPC OVERVIEW */}
             <section className="py-20 container mx-auto px-6">
                 <div className="text-center mb-14">
                     <h2 className="text-3xl font-bold mb-4">
@@ -96,6 +129,12 @@ function ServiceHeroTwo() {
                             Detailed electrical and civil design optimized for performance,
                             safety, and long-term efficiency.
                         </p>
+                        <ul className="mt-3 text-gray-600 space-y-1">
+                            <li>• Relay Protection & System Integration</li>
+                            <li>• Grounding & Lightning Protection</li>
+                            <li>• Roads & Hydrological Studies</li>
+                            <li>• Control Buildings</li>
+                        </ul>
                     </div>
 
                     <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
@@ -105,6 +144,9 @@ function ServiceHeroTwo() {
                             Strategic sourcing of high-quality solar modules, inverters,
                             transformers, and grid infrastructure.
                         </p>
+                        <ul className="mt-3 text-gray-600 space-y-1">
+                            <li>• Supply Chain Management</li>
+                        </ul>
                     </div>
 
                     <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
@@ -114,11 +156,14 @@ function ServiceHeroTwo() {
                             Full construction execution, commissioning, and long-term
                             operation & maintenance services.
                         </p>
+                        <ul className="mt-3 text-gray-600 space-y-1">
+                            <li>• Civil Works: Roads, Drainage, Fences, Control Buildings</li>
+                        </ul>
                     </div>
                 </div>
             </section>
 
-            {/* TECHNICAL EXPERTISE */}
+            {/* ORIGINAL TECHNICAL EXPERTISE */}
             <section className="bg-white py-20">
                 <div className="container mx-auto px-6">
                     <div className="text-center mb-14">
@@ -147,7 +192,7 @@ function ServiceHeroTwo() {
                 </div>
             </section>
 
-            {/* PROJECT MANAGEMENT */}
+            {/* ORIGINAL PROJECT MANAGEMENT */}
             <section className="py-20 bg-gray-100">
                 <div className="container mx-auto px-6 text-center">
                     <ChartBarIcon className="h-12 w-12 text-yellow-500 mx-auto mb-4" />
@@ -157,10 +202,19 @@ function ServiceHeroTwo() {
                         procurement coordination, quality control, and stakeholder
                         reporting throughout the entire project lifecycle.
                     </p>
+
+                    {/* PROJECT EXECUTION METHODOLOGY */}
+                    <div className="mt-10 max-w-4xl mx-auto grid md:grid-cols-5 gap-4 text-left">
+                        {projectMethodology.map((step, i) => (
+                            <div key={i} className="bg-white p-4 rounded-xl shadow text-gray-800 font-semibold text-sm text-center hover:shadow-lg transition">
+                                {i + 1}. {step}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
 
-            {/* INSTALLATION & COMMISSIONING */}
+            {/* ORIGINAL INSTALLATION & COMMISSIONING */}
             <section className="py-20 container mx-auto px-6 bg-gray-50">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl font-extrabold text-yellow-600 drop-shadow-lg">
@@ -176,9 +230,6 @@ function ServiceHeroTwo() {
                     <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white p-8 rounded-3xl shadow-2xl hover:scale-105 transition-transform duration-300 relative overflow-hidden">
                         <div className="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-yellow-200 rounded-full opacity-20"></div>
                         <h3 className="font-bold text-2xl mb-6 flex items-center gap-3">
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                            </svg>
                             Installation Services
                         </h3>
                         <ul className="space-y-3 text-white/90">
@@ -192,9 +243,6 @@ function ServiceHeroTwo() {
                     <div className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-8 rounded-3xl shadow-2xl hover:scale-105 transition-transform duration-300 relative overflow-hidden">
                         <div className="absolute bottom-0 left-0 -mb-4 -ml-4 w-24 h-24 bg-blue-200 rounded-full opacity-20"></div>
                         <h3 className="font-bold text-2xl mb-6 flex items-center gap-3">
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m2 0a9 9 0 11-4.5-7.9" />
-                            </svg>
                             Testing & Commissioning
                         </h3>
                         <ul className="space-y-3 text-white/90">
@@ -206,8 +254,8 @@ function ServiceHeroTwo() {
                 </div>
             </section>
 
-            {/* MAINTENANCE */}
-            <section className="bg-white py-20">
+            {/* ORIGINAL MAINTENANCE */}
+            <section className="bg-gray-50 py-10">
                 <div className="container mx-auto px-6">
                     <div className="text-center mb-14">
                         <h2 className="text-3xl font-bold">
@@ -231,99 +279,42 @@ function ServiceHeroTwo() {
                 </div>
             </section>
 
-            <section className="relative bg-gradient-to-b from-gray-900 to-gray-800 py-24 text-white overflow-hidden">
-                <div className="container mx-auto px-6 relative z-10">
-
-                    {/* SECTION HEADER */}
-                    <div className="text-center mb-16">
-                        <p className="text-yellow-400 uppercase tracking-[0.3em] text-sm font-semibold">
-                            Industrial & High Voltage Expertise
-                        </p>
-                        <h2 className="text-3xl md:text-4xl font-bold mt-4">
-                            Proven Infrastructure & Power System Experience
-                        </h2>
-                        <div className="w-24 h-1 bg-yellow-500 mx-auto mt-6 rounded-full"></div>
-                    </div>
-
-                    {/* FEATURE GRID */}
-                    <div className="grid lg:grid-cols-2 gap-10">
-
-                        {/* CARD 1 */}
-                        <div className="bg-gray-800/70 backdrop-blur-lg p-10 rounded-2xl border border-gray-700 hover:border-yellow-500 transition duration-300 shadow-xl">
-                            <h3 className="text-2xl font-semibold mb-6 text-yellow-400">
-                                Industrial Power & Machinery Installation
-                            </h3>
-                            <ul className="space-y-3 text-gray-300">
-                                <li>• Complete Power & Lighting Systems for Industrial Plants</li>
-                                <li>• Panel Boards, Load Centers, Cable Trays & Conduits</li>
-                                <li>• PLC, Motor Controls & Instrumentation Systems</li>
-                                <li>• DC Drives & Variable Frequency Controllers</li>
-                                <li>• Custom Fabrication of Control Panels & Metal Enclosures</li>
+            {/* SAFETY & QUALITY */}
+            <section className="py-20 container mx-auto px-6 bg-gray-50">
+                <div className="text-center mb-16">
+                    <h2 className="text-3xl font-bold mb-6">Safety Commitment & Quality Assurance</h2>
+                    <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                        <div className="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition">
+                            <h3 className="font-semibold text-xl mb-4 flex items-center gap-2"><ShieldExclamationIcon className="h-6 w-6 text-yellow-500" /> Safety Commitment</h3>
+                            <ul className="space-y-2 text-gray-700 text-start">
+                                {safetyCommitment.map((item,i)=> <li key={i}>• {item}</li>)}
                             </ul>
                         </div>
-
-                        {/* CARD 2 */}
-                        <div className="bg-gray-800/70 backdrop-blur-lg p-10 rounded-2xl border border-gray-700 hover:border-yellow-500 transition duration-300 shadow-xl">
-                            <h3 className="text-2xl font-semibold mb-6 text-yellow-400">
-                                Generators & Transformer Installations
-                            </h3>
-                            <ul className="space-y-3 text-gray-300">
-                                <li>• Diesel Generators up to <span className="text-white font-semibold">5,000 kVA</span></li>
-                                <li>• Oil-Immersed Transformers up to <span className="text-white font-semibold">10,000 kVA (34.5kV)</span></li>
-                                <li>• Dry-Type Transformers up to 1,000 kVA</li>
-                                <li>• High & Low Voltage Switchgear</li>
-                                <li>• Automatic & Manual Transfer Switches</li>
+                        <div className="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition">
+                            <h3 className="font-semibold text-xl mb-4 flex items-center gap-2"><DocumentCheckIcon className="h-6 w-6 text-yellow-500" /> Quality Assurance</h3>
+                            <ul className="space-y-2 text-gray-700 text-start">
+                                {qualityAssurance.map((item,i)=> <li key={i}>• {item}</li>)}
                             </ul>
-                        </div>
-
-                        {/* CARD 3 */}
-                        <div className="bg-gray-800/70 backdrop-blur-lg p-10 rounded-2xl border border-gray-700 hover:border-yellow-500 transition duration-300 shadow-xl">
-                            <h3 className="text-2xl font-semibold mb-6 text-yellow-400">
-                                Substation & Distribution Systems
-                            </h3>
-                            <ul className="space-y-3 text-gray-300">
-                                <li>• Substation Installation & Commissioning</li>
-                                <li>• High Voltage Cable Termination & Splicing</li>
-                                <li>• Pole Erection & Line Stringing</li>
-                                <li>• Load Break Switches & Lightning Arresters</li>
-                                <li>• Power Capacitor Installation for PF Correction</li>
-                            </ul>
-                        </div>
-
-                        {/* CARD 4 */}
-                        <div className="bg-gray-800/70 backdrop-blur-lg p-10 rounded-2xl border border-gray-700 hover:border-yellow-500 transition duration-300 shadow-xl">
-                            <h3 className="text-2xl font-semibold mb-6 text-yellow-400">
-                                Preventive Maintenance & Testing
-                            </h3>
-                            <ul className="space-y-3 text-gray-300">
-                                <li>• Transformer & Switchgear Servicing</li>
-                                <li>• Relay Calibration & Oil Filtering</li>
-                                <li>• Earth Resistance Testing</li>
-                                <li>• Oil Dielectric Breakdown Voltage Testing</li>
-                                <li>• High Voltage Cable Testing</li>
-                            </ul>
-                        </div>
-
-                    </div>
-
-                    {/* BOTTOM STAT BAR */}
-                    <div className="mt-20 grid md:grid-cols-3 gap-8 text-center">
-                        <div>
-                            <h3 className="text-4xl font-bold text-yellow-400">10,000 kVA</h3>
-                            <p className="text-gray-400 mt-2">Transformer Capacity Delivered</p>
-                        </div>
-                        <div>
-                            <h3 className="text-4xl font-bold text-yellow-400">34.5 kV</h3>
-                            <p className="text-gray-400 mt-2">High Voltage Systems Installed</p>
-                        </div>
-                        <div>
-                            <h3 className="text-4xl font-bold text-yellow-400">5,000 kVA</h3>
-                            <p className="text-gray-400 mt-2">Generator Installation Capability</p>
                         </div>
                     </div>
-
                 </div>
             </section>
+
+            {/* WHY CHOOSE US */}
+            <section className="py-10 bg-gray-50">
+                <div className="container mx-auto px-6 text-center">
+                    <h2 className="text-3xl font-bold mb-10">Why Choose Us</h2>
+                    <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                        {whyChooseUs.map((item, i) => (
+                            <div key={i} className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition flex items-center gap-3">
+                                <CheckCircleIcon className="h-6 w-6 text-yellow-500" />
+                                <p className="text-gray-700 font-semibold">{item}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* CTA */}
             <section className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-white py-20 text-center">
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -334,9 +325,9 @@ function ServiceHeroTwo() {
                     scalable, and sustainable renewable energy infrastructure.
                 </p>
                 <Link to="/contact">
-                <button className="bg-white text-yellow-600 px-10 py-4 rounded-xl font-semibold hover:bg-gray-100 transition shadow-lg">
+                    <button className="bg-white text-yellow-600 px-10 py-4 rounded-xl font-semibold hover:bg-gray-100 transition shadow-lg">
                         Request Consultation
-                </button>
+                    </button>
                 </Link>
             </section>
 

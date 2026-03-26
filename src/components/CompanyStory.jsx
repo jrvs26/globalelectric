@@ -147,7 +147,7 @@ export default function CompanyStory() {
     },
   ];
   return (
-    <div className="relative pt-10 w-full overflow-clip">
+    <div className="pt-10 relative w-full overflow-clip bg-gray-50">
       <Timeline data={data} />
     </div>
   );

@@ -39,22 +39,7 @@ function ServiceHero() {
     <>
       <div className="bg-gray-50 min-h-screen">
         {/* Hero Section */}
-        <section className="bg-yellow-500 text-white py-40">
-          <div className="container mx-auto px-6 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Professional Electrical Services
-            </h1>
-            <p className="text-lg md:text-xl max-w-2xl mx-auto">
-              Reliable, licensed, and experienced electrical contractors serving
-              residential and commercial clients.
-            </p>
-            <Link to="/contact">
-            <button className="mt-6 bg-white text-yellow-600 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition">
-              Request a Free Quote
-            </button>
-            </Link>
-          </div>
-        </section>
+
 
         {/* Services Section */}
         <section className="py-16">
