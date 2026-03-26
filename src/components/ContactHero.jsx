@@ -106,7 +106,7 @@ function ContactHero() {
           </div>
 
           {/* Image below info */}
-          <div className="rounded-xl w-[500px] h-[250px] overflow-hidden mt-4">
+          <div className="rounded-xl w-full max-w-[500px] h-[200px] sm:h-[250px] overflow-hidden mt-4 mx-auto">
             <img
               src={globalLogo}
               alt="Illustration of our team collaborating"
