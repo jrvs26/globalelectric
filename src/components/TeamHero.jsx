@@ -31,22 +31,22 @@ const departments = [
       },
       {
         name: "Jan Kyle Tobias",
-        role: "Software Developer",
+        role: "Design Mechanical Engineer",
         image: kyleTobias,
       },
       {
         name: "Richard Cajayon",
-        role: "Web Designer",
+        role: "QA/QC CIVIL Engineer",
         image: cajayon,
       },
       {
         name: "Lauden Manuel",
-        role: "UI Designer",
+        role: "Project Manager",
         image: manuelLauden,
       },
       {
         name: "Mary May Lizarondo",
-        role: "Web Designer",
+        role: "CAD Operator",
         image: maryMay,
       }
     ],
