@@ -1,7 +1,11 @@
 import React from "react";
 import ceo from "../assets/ceo.jpg"
 import vice from "../assets/vice.jpg"
-
+import cajayon from "../assets/engineering/cajayon.jpg"
+import kyleTobias from "../assets/engineering/kyletobias.jpg"
+import mervin from "../assets/engineering/mervinYaun.jpg"
+import maryMay from "../assets/engineering/maryMay.jpg"
+import manuelLauden from "../assets/engineering/manuelLauden.jpg"
 
 const leadership = [
   {
@@ -21,62 +25,57 @@ const departments = [
     name: "Engineering Team",
     members: [
       {
-        name: "Sophia",
+        name: "Mervin Yaun",
+        role: "Electrical Engineer",
+        image: mervin,
+      },
+      {
+        name: "Jan Kyle Tobias",
         role: "Software Developer",
-        image: "https://readymadeui.com/team-4.webp",
+        image: kyleTobias,
       },
       {
-        name: "Alen",
-        role: "Software Developer",
-        image: "https://readymadeui.com/team-5.webp",
-      },
-      {
-        name: "Simon Konecki",
+        name: "Richard Cajayon",
         role: "Web Designer",
-        image: "https://readymadeui.com/team-3.webp",
+        image: cajayon,
       },
       {
-        name: "Eleanor",
+        name: "Lauden Manuel",
         role: "UI Designer",
-        image: "https://readymadeui.com/team-6.webp",
+        image: manuelLauden,
       },
       {
-        name: "Simon Konecki",
+        name: "Mary May Lizarondo",
         role: "Web Designer",
-        image: "https://readymadeui.com/team-3.webp",
-      },
-      {
-        name: "Eleanor",
-        role: "UI Designer",
-        image: "https://readymadeui.com/team-6.webp",
-      },
+        image: maryMay,
+      }
     ],
   },
-  {
-    name: "Design Team",
-    members: [
-      {
-        name: "Simon Konecki",
-        role: "Web Designer",
-        image: "https://readymadeui.com/team-3.webp",
-      },
-      {
-        name: "Eleanor",
-        role: "UI Designer",
-        image: "https://readymadeui.com/team-6.webp",
-      },
-      {
-        name: "Simon Konecki",
-        role: "Web Designer",
-        image: "https://readymadeui.com/team-3.webp",
-      },
-      {
-        name: "Eleanor",
-        role: "UI Designer",
-        image: "https://readymadeui.com/team-6.webp",
-      },
-    ],
-  },
+  // {
+  //   name: "Design Team",
+  //   members: [
+  //     {
+  //       name: "Simon Konecki",
+  //       role: "Web Designer",
+  //       image: "https://readymadeui.com/team-3.webp",
+  //     },
+  //     {
+  //       name: "Eleanor",
+  //       role: "UI Designer",
+  //       image: "https://readymadeui.com/team-6.webp",
+  //     },
+  //     {
+  //       name: "Simon Konecki",
+  //       role: "Web Designer",
+  //       image: "https://readymadeui.com/team-3.webp",
+  //     },
+  //     {
+  //       name: "Eleanor",
+  //       role: "UI Designer",
+  //       image: "https://readymadeui.com/team-6.webp",
+  //     },
+  //   ],
+  // },
 ];
 
 const TeamHero = () => {
