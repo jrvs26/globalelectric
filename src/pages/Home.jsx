@@ -11,6 +11,8 @@ import MessageCeoHero from '../components/MessageCeoHero'
 import { useLocation } from 'react-router-dom'
 import HeadlineHero from '../components/HeadlineHero'
 import TeamHero from "../components/TeamHero"
+import Reveal from "../ui/Reveal"
+
 
 function Home() {
 
@@ -29,15 +31,15 @@ function Home() {
     return (
         <>
             <Navbar />
-            <WelcomeHero />
-            <HeadlineHero />
-            <CompanyStory />
-            <AboutHero />
-            <MessageCeoHero />
-            <ServiceHero />
+            <Reveal><WelcomeHero /></Reveal>
+            <Reveal><HeadlineHero /></Reveal>
+            <Reveal><CompanyStory /></Reveal>
+            <Reveal><AboutHero /></Reveal>
+            <Reveal><MessageCeoHero /></Reveal>
+            <Reveal><ServiceHero /></Reveal>
             <TeamHero />
-            <TopClients />
-            <ContactHero />
+            <Reveal><TopClients /></Reveal>
+            <Reveal><ContactHero /></Reveal>
             <Footer />
         </>
     )

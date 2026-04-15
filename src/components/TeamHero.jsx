@@ -1,11 +1,7 @@
 import React from "react";
-import ceo from "../assets/ceo.jpg"
-import vice from "../assets/vice.jpg"
-import cajayon from "../assets/engineering/cajayon.jpg"
-import kyleTobias from "../assets/engineering/kyletobias.jpg"
-import mervin from "../assets/engineering/mervinYaun.jpg"
-import maryMay from "../assets/engineering/maryMay.jpg"
-import manuelLauden from "../assets/engineering/manuelLauden.jpg"
+import { ceo, vice, cajayon, kyleTobias, mervin, maryMay, manuelLauden, jez, gio, obet, riz, ped, wilson, roegine, danilo, jm, karen, kath, kim, toinette, rhoda, rose, danica, danielle, gilbert, redentor, raquel, edlene, angeline, mike, ricky} from "../assets/asset.js"
+
+
 
 const leadership = [
   {
@@ -22,11 +18,107 @@ const leadership = [
 
 const departments = [
   {
-    name: "Engineering Team",
+    name: "HR & Administrative Team",
     members: [
       {
+        name: "Raquel Pascual",
+        role: "Administrative Head",
+        image: raquel,
+      },
+      {
+        name: "Edlene Joy Garcia",
+        role: "HR Head/ Vendor Coordinator",
+        image: edlene,
+      },
+      {
+        name: "Angeline Mateo",
+        role: "Payroll Staff",
+        image: angeline,
+      },
+      {
+        name: "Marcelino Alday",
+        role: "Liason Officer",
+        image: mike,
+      },
+    ],
+  },
+  {
+    name: "Finance and Accounting Team",
+    members: [
+      {
+        name: "Rhodora Tobias",
+        role: "Finance Head",
+        image: rhoda,
+      },
+      {
+        name: "Mary Rose Borbe",
+        role: "Procurement Manager",
+        image: rose,
+      },
+      {
+        name: "Danica Garcia",
+        role: "Assistant Purchaser",
+        image: danica,
+      },  
+      {
+        name: "Danielle Saena Mateo",
+        role: "Marketing Representative",
+        image: danielle,
+      },
+      {
+        name: "Danilo Santiago",
+        role: "Accountant",
+        image: danilo,
+      },
+      {
+        name: "Kathleen Garcia",
+        role: "Accounting Staff",
+        image: kath,
+      },
+      {
+        name: "Karen Joy Paular",
+        role: "Book Keeper",
+        image: karen,
+      },
+      {
+        name: "Kim Mirate Paular",
+        role: "Assistant Book keeper",
+        image: kim,
+      },
+      {
+        name: "Toinette Delos Angeles",
+        role: "Data Encoder",
+        image: toinette,
+      },
+      {
+        name: "John Michael Del Rosario",
+        role: "Data Encoder",
+        image: jm,
+      },
+      {
+        name: "Engelbert Lazaro",
+        role: "Warehouse Head",
+        image: gilbert,
+      },
+      {
+        name: "Redentor Tuazon",
+        role: "Warehouse Clerk",
+        image: redentor,
+      },
+
+    ],
+  },
+  {
+    name: "Engineering Team",
+    members: [
+       {
+        name: "Richard Garcia",
+        role: "Design Manager",
+        image: ricky,
+      },
+      {
         name: "Mervin Yaun",
-        role: "Electrical Engineer",
+        role: "Senior Electrical Engineer",
         image: mervin,
       },
       {
@@ -36,7 +128,7 @@ const departments = [
       },
       {
         name: "Richard Cajayon",
-        role: "QA/QC CIVIL Engineer",
+        role: "Design Manager",
         image: cajayon,
       },
       {
@@ -51,31 +143,46 @@ const departments = [
       }
     ],
   },
-  // {
-  //   name: "Design Team",
-  //   members: [
-  //     {
-  //       name: "Simon Konecki",
-  //       role: "Web Designer",
-  //       image: "https://readymadeui.com/team-3.webp",
-  //     },
-  //     {
-  //       name: "Eleanor",
-  //       role: "UI Designer",
-  //       image: "https://readymadeui.com/team-6.webp",
-  //     },
-  //     {
-  //       name: "Simon Konecki",
-  //       role: "Web Designer",
-  //       image: "https://readymadeui.com/team-3.webp",
-  //     },
-  //     {
-  //       name: "Eleanor",
-  //       role: "UI Designer",
-  //       image: "https://readymadeui.com/team-6.webp",
-  //     },
-  //   ],
-  // },
+  {
+    name: "Meralco Team",
+    members: [
+      {
+        name: "Mark Jason Ped",
+        role: "Budget Controller",
+        image: ped,
+      },
+      {
+        name: "Jezriel Arellano",
+        role: "Vendor Coordinator",
+        image: jez,
+      },
+      {
+        name: "Roegine Tobias",
+        role: "Vendor Q/A",
+        image: roegine,
+      },
+      {
+        name: "Roberto Tobias",
+        role: "Vendor Coordinator",
+        image: obet,
+      },
+      {
+        name: "Gio Bryan Malinao",
+        role: "Safety Officer",
+        image: gio,
+      },
+      {
+        name: "Wilson Delos Reyes",
+        role: "Warehouse Clerk",
+        image: wilson,
+      },
+       {
+        name: "Riz Margarejo",
+        role: "Materials Man",
+        image: riz,
+      },
+    ],
+  },
 ];
 
 const TeamHero = () => {

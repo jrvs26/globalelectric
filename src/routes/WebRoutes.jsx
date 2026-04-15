@@ -42,10 +42,17 @@ function WebRoutes() {
     "press",
     "news",
     "blog",
-    "documentation",
+    "docs",
     "community",
     "support",
     "projects/san-ildefonso-1",
+    "projects/san-ildefonso-2",
+    "projects/alaminos",
+    "projects/gigasol3",
+    "projects/pavi",
+    "projects/gigaace8",
+    "projects/sspc",
+    "projects/dagohoy",
   ];
 
   return (
