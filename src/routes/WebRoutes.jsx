@@ -9,6 +9,10 @@ import ErrorBoundary from "../components/ErrorBoundary";
 import Services from "../pages/Services";
 import Gallery from "../pages/Gallery";
 
+// Project Components
+import ProjectHeroSanIldeonfoso from "../components/ProjectHeroSanIldefonso"
+
+
 // Gallery Components
 import GalleryHeavyEqui from "../components/GalleyHeavyEqui";
 import GalleryAlaminos from "../components/GalleryAlaminos";
@@ -31,6 +35,11 @@ function WebRoutes() {
     { path: "san-manuel-pangasinan", component: GallerySSPC },
     { path: "dagohoy", component: GalleryDagohoy },
   ];
+
+  // Dynamic project routes
+  const projectRoutes = [
+    
+  ]
 
   // Routes pointing to Maintenance
   const maintenanceRoutes = [
@@ -62,6 +71,9 @@ function WebRoutes() {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/projects" element={<Project />} />
+         {projectRoutes.map(({ path, component: Component }) => (
+          <Route key={path} path={`/projects/${path}`} element={<Component />} />
+        ))}
         <Route path="/gallery" element={<Gallery />} />
         {galleryRoutes.map(({ path, component: Component }) => (
           <Route key={path} path={`/gallery/${path}`} element={<Component />} />

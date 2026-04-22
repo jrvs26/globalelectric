@@ -212,7 +212,7 @@ const TeamHero = () => {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover bg-gradient-to-br from-indigo-950 via-white to-yellow-500"
                 />
               </div>
 
@@ -245,7 +245,7 @@ const TeamHero = () => {
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover bg-gradient-to-br from-indigo-950 via-white to-yellow-500"
                     />
                   </div>
 
