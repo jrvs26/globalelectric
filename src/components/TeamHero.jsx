@@ -208,7 +208,7 @@ const TeamHero = () => {
         <div className="flex flex-wrap justify-center gap-16">
           {leadership.map((member, index) => (
             <div key={index} className="text-center">
-              <div className="w-36 h-36 rounded-full overflow-hidden bg-gray-50 mx-auto">
+              <div className="w-36 h-36 rounded-xl overflow-hidden bg-gray-50 mx-auto">
                 <img
                   src={member.image}
                   alt={member.name}
@@ -241,7 +241,7 @@ const TeamHero = () => {
             <div className="flex flex-wrap justify-center gap-10">
               {dept.members.map((member, i) => (
                 <div key={i} className="text-center w-32">
-                  <div className="w-28 h-28 rounded-full overflow-hidden bg-gray-50 mx-auto">
+                  <div className="w-32 h-32 rounded-xl overflow-hidden bg-gray-50 mx-auto">
                     <img
                       src={member.image}
                       alt={member.name}

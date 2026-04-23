@@ -22,6 +22,7 @@ import GalleryPavi from "../components/GalleryPavi";
 import GalleryGiga from "../components/GalleryGiga";
 import GallerySSPC from "../components/GallerySSPC";
 import GalleryDagohoy from "../components/GalleryDagohoy";
+import ProjectHeroAlaminos from "../components/ProjectHeroAlaminos";
 
 function WebRoutes() {
   // Dynamic gallery routes
@@ -38,7 +39,8 @@ function WebRoutes() {
 
   // Dynamic project routes
   const projectRoutes = [
-    
+    { path: "san-ildefonso-1", component: ProjectHeroSanIldeonfoso },
+    { path: "alaminos", component: ProjectHeroAlaminos }
   ]
 
   // Routes pointing to Maintenance
@@ -54,9 +56,7 @@ function WebRoutes() {
     "docs",
     "community",
     "support",
-    "projects/san-ildefonso-1",
     "projects/san-ildefonso-2",
-    "projects/alaminos",
     "projects/gigasol3",
     "projects/pavi",
     "projects/gigaace8",
