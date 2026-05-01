@@ -34,6 +34,7 @@ function Navbar() {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   const navLinks = [
+    {name: "Home", href: "/"},
     { name: "About", href: "/about" },
     { name: "Projects", href: "/projects" },
     { name: "Services", href: "/services" },
